@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Myapp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <%= link_to 'Home', cadastros_path, class: "navbar-brand" %>
+
+    <%= form_tag busca_cadastro_path, method: :get, class: "form-inline" do %>
+    <div class="form-group">
+      <%= text_field_tag :nome, nil, class: "form-control" %>
+      <%= button_to "Buscar", nil, class: "btn btn-primary" %>
+    </div>
+    <% end %>
+
+  </nav>
+  <%= yield %>
+</body>
+
+</html>
