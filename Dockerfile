@@ -1,20 +1,11 @@
-FROM ruby:2.5
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
-# https://github.com/nodesource/distributions#installation-instructions
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
-        && apt-get install -y nodejs
-RUN mkdir /myapp
-WORKDIR /myapp
-COPY Gemfile /myapp/Gemfile
-COPY Gemfile.lock /myapp/Gemfile.lock
+FROM ruby:alpine
+
+RUN apk add --update build-base postgresql-dev tzdata
+RUN gem install rails -v '5.2.2'
+
+WORKDIR /app
+ADD Gemfile Gemfile.lock /app/
 RUN bundle install
-COPY . /myapp
 
-# Add a script to be executed every time the container starts.
-COPY entrypoint.sh /usr/bin/
-RUN chmod +x /usr/bin/entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
-EXPOSE 3000
-
-# Start the main process.
-CMD ["rails", "server", "-b", "0.0.0.0"]
+ADD . .
+CMD ["puma"]
