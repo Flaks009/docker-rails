@@ -1,2 +1,0 @@
-class Cadastro < ApplicationRecord
-end
