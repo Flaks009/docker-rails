@@ -1,3 +1,4 @@
+<div class="container">
 <%= bootstrap_form_with(model: curriculo, local: true) do |form| %>
   <% if curriculo.errors.any? %>
     <div id="error_explanation">
@@ -85,3 +86,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>

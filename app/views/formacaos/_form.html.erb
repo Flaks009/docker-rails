@@ -1,3 +1,4 @@
+<div class="container">
 <%= bootstrap_form_with(model: formacao, local: true) do |form| %>
   <% if formacao.errors.any? %>
     <div id="error_explanation">
@@ -35,3 +36,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
