@@ -1,4 +1,4 @@
-<%= form_with(model: contratacao, local: true) do |form| %>
+<%= bootstrap_form_with(model: contratacao, local: true) do |form| %>
   <% if contratacao.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(contratacao.errors.count, "error") %> prohibited this contratacao from being saved:</h2>

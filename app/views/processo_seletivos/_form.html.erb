@@ -1,4 +1,4 @@
-<%= form_with(model: processo_seletivo, local: true) do |form| %>
+<%= bootstrap_form_with(model: processo_seletivo, local: true) do |form| %>
   <% if processo_seletivo.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(processo_seletivo.errors.count, "error") %> prohibited this processo_seletivo from being saved:</h2>

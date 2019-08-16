@@ -1,4 +1,4 @@
-<%= form_with(model: exp_profissional, local: true) do |form| %>
+<%= bootstrap_form_with(model: exp_profissional, local: true) do |form| %>
   <% if exp_profissional.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(exp_profissional.errors.count, "error") %> prohibited this exp_profissional from being saved:</h2>

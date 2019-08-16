@@ -1,4 +1,4 @@
-<%= form_with(model: curriculo, local: true) do |form| %>
+<%= bootstrap_form_with(model: curriculo, local: true) do |form| %>
   <% if curriculo.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(curriculo.errors.count, "error") %> prohibited this curriculo from being saved:</h2>
