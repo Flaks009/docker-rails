@@ -1,2 +1,0 @@
-class ExpProfissional < ApplicationRecord
-end

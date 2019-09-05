@@ -1,2 +1,0 @@
-class ProcessoSeletivo < ApplicationRecord
-end
