@@ -14,20 +14,16 @@ class CurriculosTest < ApplicationSystemTestCase
     visit curriculos_url
     click_on "New Curriculo"
 
-    fill_in "Cep", with: @curriculo.CEP
-    fill_in "Cpf", with: @curriculo.CPF
-    fill_in "Cidade", with: @curriculo.Cidade
-    fill_in "Curso complementar", with: @curriculo.Curso_Complementar
-    fill_in "Data nascimento", with: @curriculo.Data_Nascimento
-    fill_in "Email", with: @curriculo.Email
-    fill_in "Estado", with: @curriculo.Estado
-    fill_in "Expprofissional", with: @curriculo.ExpProfissional
-    fill_in "Formacao", with: @curriculo.Formacao
-    fill_in "Logradouro", with: @curriculo.Logradouro
-    fill_in "Nome completo", with: @curriculo.Nome_Completo
-    fill_in "Rg", with: @curriculo.RG
-    fill_in "Telefone", with: @curriculo.Telefone
-    fill_in "Uf", with: @curriculo.UF
+    fill_in "Cep", with: @curriculo.cep
+    fill_in "Cidade", with: @curriculo.cidade
+    fill_in "Cpf", with: @curriculo.cpf
+    fill_in "Datanasc", with: @curriculo.dataNasc
+    fill_in "Email", with: @curriculo.email
+    fill_in "Estado", with: @curriculo.estado
+    fill_in "Logradouro", with: @curriculo.logradouro
+    fill_in "Nome", with: @curriculo.nome
+    fill_in "Rg", with: @curriculo.rg
+    fill_in "Telefone", with: @curriculo.telefone
     click_on "Create Curriculo"
 
     assert_text "Curriculo was successfully created"
@@ -38,20 +34,16 @@ class CurriculosTest < ApplicationSystemTestCase
     visit curriculos_url
     click_on "Edit", match: :first
 
-    fill_in "Cep", with: @curriculo.CEP
-    fill_in "Cpf", with: @curriculo.CPF
-    fill_in "Cidade", with: @curriculo.Cidade
-    fill_in "Curso complementar", with: @curriculo.Curso_Complementar
-    fill_in "Data nascimento", with: @curriculo.Data_Nascimento
-    fill_in "Email", with: @curriculo.Email
-    fill_in "Estado", with: @curriculo.Estado
-    fill_in "Expprofissional", with: @curriculo.ExpProfissional
-    fill_in "Formacao", with: @curriculo.Formacao
-    fill_in "Logradouro", with: @curriculo.Logradouro
-    fill_in "Nome completo", with: @curriculo.Nome_Completo
-    fill_in "Rg", with: @curriculo.RG
-    fill_in "Telefone", with: @curriculo.Telefone
-    fill_in "Uf", with: @curriculo.UF
+    fill_in "Cep", with: @curriculo.cep
+    fill_in "Cidade", with: @curriculo.cidade
+    fill_in "Cpf", with: @curriculo.cpf
+    fill_in "Datanasc", with: @curriculo.dataNasc
+    fill_in "Email", with: @curriculo.email
+    fill_in "Estado", with: @curriculo.estado
+    fill_in "Logradouro", with: @curriculo.logradouro
+    fill_in "Nome", with: @curriculo.nome
+    fill_in "Rg", with: @curriculo.rg
+    fill_in "Telefone", with: @curriculo.telefone
     click_on "Update Curriculo"
 
     assert_text "Curriculo was successfully updated"

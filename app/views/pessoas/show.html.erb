@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @pessoa.nome %>
+</p>
+
+<p>
+  <strong>Datanasc:</strong>
+  <%= @pessoa.dataNasc %>
+</p>
+
+<p>
+  <strong>Rg:</strong>
+  <%= @pessoa.rg %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @pessoa.cpf %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @pessoa.email %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @pessoa.telefone %>
+</p>
+
+<p>
+  <strong>Logradouro:</strong>
+  <%= @pessoa.logradouro %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @pessoa.cidade %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @pessoa.estado %>
+</p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @pessoa.cep %>
+</p>
+
+<%= link_to 'Edit', edit_pessoa_path(@pessoa) %> |
+<%= link_to 'Back', pessoas_path %>

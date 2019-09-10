@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @curriculo.nome %>
+</p>
+
+<p>
+  <strong>Datanasc:</strong>
+  <%= @curriculo.dataNasc %>
+</p>
+
+<p>
+  <strong>Rg:</strong>
+  <%= @curriculo.rg %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @curriculo.cpf %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @curriculo.email %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @curriculo.telefone %>
+</p>
+
+<p>
+  <strong>Logradouro:</strong>
+  <%= @curriculo.logradouro %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @curriculo.cidade %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @curriculo.estado %>
+</p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @curriculo.cep %>
+</p>
+
+<%= link_to 'Edit', edit_curriculo_path(@curriculo) %> |
+<%= link_to 'Back', curriculos_path %>

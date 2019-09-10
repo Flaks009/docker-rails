@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  dataNasc: 2019-09-10
+  rg: 
+  cpf: 
+  email: 
+  telefone: 
+  logradouro: 
+  cidade: 
+  estado: 
+  cep: 
+
+two:
+  nome: MyString
+  dataNasc: 2019-09-10
+  rg: 
+  cpf: 
+  email: 
+  telefone: 
+  logradouro: 
+  cidade: 
+  estado: 
+  cep: 

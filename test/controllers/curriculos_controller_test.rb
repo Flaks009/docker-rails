@@ -17,7 +17,7 @@ class CurriculosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create curriculo" do
     assert_difference('Curriculo.count') do
-      post curriculos_url, params: { curriculo: { CEP: @curriculo.CEP, CPF: @curriculo.CPF, Cidade: @curriculo.Cidade, Curso_Complementar: @curriculo.Curso_Complementar, Data_Nascimento: @curriculo.Data_Nascimento, Email: @curriculo.Email, Estado: @curriculo.Estado, ExpProfissional: @curriculo.ExpProfissional, Formacao: @curriculo.Formacao, Logradouro: @curriculo.Logradouro, Nome_Completo: @curriculo.Nome_Completo, RG: @curriculo.RG, Telefone: @curriculo.Telefone, UF: @curriculo.UF } }
+      post curriculos_url, params: { curriculo: { cep: @curriculo.cep, cidade: @curriculo.cidade, cpf: @curriculo.cpf, dataNasc: @curriculo.dataNasc, email: @curriculo.email, estado: @curriculo.estado, logradouro: @curriculo.logradouro, nome: @curriculo.nome, rg: @curriculo.rg, telefone: @curriculo.telefone } }
     end
 
     assert_redirected_to curriculo_url(Curriculo.last)
@@ -34,7 +34,7 @@ class CurriculosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update curriculo" do
-    patch curriculo_url(@curriculo), params: { curriculo: { CEP: @curriculo.CEP, CPF: @curriculo.CPF, Cidade: @curriculo.Cidade, Curso_Complementar: @curriculo.Curso_Complementar, Data_Nascimento: @curriculo.Data_Nascimento, Email: @curriculo.Email, Estado: @curriculo.Estado, ExpProfissional: @curriculo.ExpProfissional, Formacao: @curriculo.Formacao, Logradouro: @curriculo.Logradouro, Nome_Completo: @curriculo.Nome_Completo, RG: @curriculo.RG, Telefone: @curriculo.Telefone, UF: @curriculo.UF } }
+    patch curriculo_url(@curriculo), params: { curriculo: { cep: @curriculo.cep, cidade: @curriculo.cidade, cpf: @curriculo.cpf, dataNasc: @curriculo.dataNasc, email: @curriculo.email, estado: @curriculo.estado, logradouro: @curriculo.logradouro, nome: @curriculo.nome, rg: @curriculo.rg, telefone: @curriculo.telefone } }
     assert_redirected_to curriculo_url(@curriculo)
   end
 
