@@ -22,7 +22,6 @@ class PessoasController < ApplicationController
   end
 
   # POST /pessoas
-  # POST /pessoas.json
   def create
     @pessoa = Pessoa.new(pessoa_params)
 
