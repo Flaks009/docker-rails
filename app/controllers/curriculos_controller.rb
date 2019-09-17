@@ -5,7 +5,7 @@ class CurriculosController < ApplicationController
   # GET /curriculos.json
   def index
     @curriculos = Curriculo.all
-    render template: "cadastrosDadosPrincipais"
+    render "curriculos/cadastrosDadosPrincipais"
   end
 
   # GET /curriculos/1
