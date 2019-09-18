@@ -5,7 +5,6 @@ class CurriculosController < ApplicationController
   # GET /curriculos.json
   def index
     @curriculos = Curriculo.all
-    render "curriculos/cadastrosDadosPrincipais"
   end
 
   # GET /curriculos/1

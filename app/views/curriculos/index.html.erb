@@ -1,45 +1,45 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Synergia | Sistema de Gerenciamento de Currículos</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<h1>Curriculos</h1>
+    <%= stylesheet_link_tag 'https://meyerweb.com/eric/tools/css/reset/reset.css' %>
+    <%= stylesheet_link_tag 'application.css' %>
+  </head>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Datanasc</th>
-      <th>Rg</th>
-      <th>Cpf</th>
-      <th>Email</th>
-      <th>Telefone</th>
-      <th>Logradouro</th>
-      <th>Cidade</th>
-      <th>Estado</th>
-      <th>Cep</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @curriculos.each do |curriculo| %>
-      <tr>
-        <td><%= curriculo.nome %></td>
-        <td><%= curriculo.dataNasc %></td>
-        <td><%= curriculo.rg %></td>
-        <td><%= curriculo.cpf %></td>
-        <td><%= curriculo.email %></td>
-        <td><%= curriculo.telefone %></td>
-        <td><%= curriculo.logradouro %></td>
-        <td><%= curriculo.cidade %></td>
-        <td><%= curriculo.estado %></td>
-        <td><%= curriculo.cep %></td>
-        <td><%= link_to 'Show', curriculo %></td>
-        <td><%= link_to 'Edit', edit_curriculo_path(curriculo) %></td>
-        <td><%= link_to 'Destroy', curriculo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Curriculo', new_curriculo_path %>
+  <body>
+    <div class="navbar">
+      <img id="nav-logo" src="http://www.synergiaconsultoria.com.br/wp-content/uploads/2016/01/topo-logo-synergia.png?x41292">
+      <div id="nav-title">Banco de Dados de Currículos</div>
+    </div>
+    <div class="middle-bar"></div>
+    <div class="main-menu">
+      <div class="left-menu">
+        <div id="button-1">
+          <img id="img-button-1" src="/images/new-curriculum.png">
+          <button id="new-curriculum-button">Cadastrar Dados</button>
+        </div>
+        <div id="button-2">
+          <img id="img-button-2" src="/images/edit-curriculum.png">
+          <button id="edit-curriculum-button">Alterar Dados</button>
+        </div>
+      </div>
+      <div class="right-menu">
+        <div id="text-content">
+          <p id="text-pt1">No Banco de Dados de Currículos da Synergia, o 
+          candidato cadastra seu currículo e permite com que
+          o time do RH possa localizar seu perfil com muito
+          mais facilidade. </p>
+          <p id="text-pt2">Com seus dados disponíveis, o time pode alocar o 
+          candidato ao projeto mais adequado as necessecidades
+          do requisitante e ao perfil do candidato.</p>
+        </div>
+        <div id="image-content">
+          <img id="candidate-img" src="/images/candidate-img.png">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
