@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Curriculos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Datanasc</th>
+      <th>Rg</th>
+      <th>Cpf</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>Logradouro</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Cep</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @curriculos.each do |curriculo| %>
+      <tr>
+        <td><%= curriculo.nome %></td>
+        <td><%= curriculo.dataNasc %></td>
+        <td><%= curriculo.rg %></td>
+        <td><%= curriculo.cpf %></td>
+        <td><%= curriculo.email %></td>
+        <td><%= curriculo.telefone %></td>
+        <td><%= curriculo.logradouro %></td>
+        <td><%= curriculo.cidade %></td>
+        <td><%= curriculo.estado %></td>
+        <td><%= curriculo.cep %></td>
+        <td><%= link_to 'Show', curriculo %></td>
+        <td><%= link_to 'Edit', edit_curriculo_path(curriculo) %></td>
+        <td><%= link_to 'Destroy', curriculo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Curriculo', new_curriculo_path %>
